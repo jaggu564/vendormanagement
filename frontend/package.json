@@ -2,6 +2,7 @@
   "name": "vendor-management-frontend",
   "version": "1.0.0",
   "description": "Frontend for Vendor Management Platform",
+ "homepage": "https://jaggu564.github.io/vendormanagement",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
@@ -31,12 +32,15 @@
     "typescript": "^5.3.3",
     "eslint": "^8.55.0",
     "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^6.0.0"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
