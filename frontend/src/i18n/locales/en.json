@@ -1,0 +1,59 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "invalidCredentials": "Invalid email or password"
+  },
+  
+  "modules": {
+    "rfp": "Bid Manager",
+    "contracts": "Contracts",
+    "procurement": "Procurement",
+    "performance": "Performance",
+    "risk": "Risk Management",
+    "analytics": "Analytics",
+    "helpdesk": "Helpdesk",
+    "surveys": "Surveys",
+    "admin": "Administration"
+  },
+  "rfp": {
+    "title": "RFP Management",
+    "create": "Create RFP",
+    "list": "RFP List",
+    "status": "Status",
+    "dueDate": "Due Date",
+    "owner": "Owner",
+    "aiSuggestions": "AI Suggestions",
+    "explain": "Explain",
+    "advisoryOnly": "AI-Ranked (Advisory Only)",
+    "override": "Override Score",
+    "publish": "Publish RFP"
+  },
+  "ai": {
+    "explain": "Explain",
+    "rationale": "Rationale",
+    "confidence": "Confidence",
+    "advisoryOnly": "Advisory Only",
+    "override": "Override",
+    "biasFlagged": "Bias Flagged",
+    "requiresReview": "Requires Review"
+  }
+}

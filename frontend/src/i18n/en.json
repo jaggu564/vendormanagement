@@ -1,0 +1,558 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "invalidCredentials": "Invalid email or password"
+  },
+  
+  "modules": {
+    "rfp": "Bid Manager",
+    "contracts": "Contracts",
+    "procurement": "Procurement",
+    "performance": "Performance",
+    "risk": "Risk Management",
+    "analytics": "Analytics",
+    "helpdesk": "Helpdesk",
+    "surveys": "Surveys",
+    "admin": "Administration"
+  },
+  "rfp": {
+    "title": "RFP Management",
+    "create": "Create RFP",
+    "list": "RFP List",
+    "status": "Status",
+    "dueDate": "Due Date",
+    "owner": "Owner",
+    "aiSuggestions": "AI Suggestions",
+    "explain": "Explain",
+    "advisoryOnly": "AI-Ranked (Advisory Only)",
+    "override": "Override Score",
+    "publish": "Publish RFP"
+  },
+  "ai": {
+    "explain": "Explain",
+    "rationale": "Rationale",
+    "confidence": "Confidence",
+    "advisoryOnly": "Advisory Only",
+    "override": "Override",
+    "biasFlagged": "Bias Flagged",
+    "requiresReview": "Requires Review"
+  },
+  "contracts": {
+    "title": "Contracts & MSAs",
+    "subtitle": "AI-assisted, auditable contract workspace. AI is advisory only; all clauses are reviewable and overrideable.",
+    "create": "New Contract",
+    "loadError": "Unable to load contracts. Please try again.",
+    "aiDraft": "AI Draft",
+    "aiDraftRationale": "AI-drafted based on your preferred templates.",
+    "aiDraftExplain": "This draft was generated from your preferred MSA/SOW template.",
+    "aiAdvisoryBanner": "This contract was AI-assisted. All clauses are advisory only and must be reviewed and approved by a human before finalization.",
+    "empty": "No contracts yet. Create your first AI-assisted draft to get started.",
+    "detail": {
+      "placeholder": "Select a contract to view clauses, AI rationale, and version history.",
+      "loading": "Loading contract details...",
+      "loadError": "Unable to load contract details. Please try again."
+    },
+    "filters": {
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "type": "Type",
+      "allTypes": "All types"
+    },
+    "status": {
+      "draft": "Draft",
+      "inReview": "In Review",
+      "locked": "Locked"
+    },
+    "type": {
+      "amendment": "Amendment"
+    },
+    "table": {
+      "aria": "Contracts table"
+    },
+    "columns": {
+      "number": "Contract #",
+      "vendor": "Vendor",
+      "type": "Type",
+      "status": "Status",
+      "ai": "AI"
+    },
+    "clauses": {
+      "title": "Clauses & Sources",
+      "empty": "No clauses extracted yet.",
+      "aiClause": "AI Clause",
+      "aiRationaleDefault": "Suggested based on buyer preferred template and prior contracts.",
+      "source": "Source: {{source}}"
+    },
+    "versions": {
+      "title": "Version history",
+      "empty": "No versions recorded yet.",
+      "versionLabel": "Version {{number}}"
+    },
+    "templateVersion": "Template version",
+    "createAiInfo": "If you leave the main content blank, the system will draft a contract using your preferred template. All AI output is advisory only; you can edit, replace, or reject any clause.",
+    "fields": {
+      "vendorId": "Vendor ID",
+      "vendorIdHelp": "Paste or select the vendor identifier from your vendor master.",
+      "type": "Contract type",
+      "templateVersion": "Template version",
+      "templateVersionHelp": "Used to explain AI suggestions, e.g., “Drafted from buyer MSA template V2.5”.",
+      "content": "Initial draft (optional)",
+      "contentPlaceholder": "Paste an existing draft or leave blank to let AI propose an initial contract based on your template."
+    },
+    "createError": "Unable to create contract. Please check required fields and try again."
+  },
+  "procurement": {
+    "title": "Procurement & Onboarding",
+    "subtitle": "Create and sync purchase orders with ERP systems and track vendor onboarding with clear, auditable status.",
+    "createPO": "New Purchase Order",
+    "retry": "Retry",
+    "loadError": "Unable to load purchase orders. Please check your connection and try again.",
+    "empty": "No purchase orders yet. Create one to begin ERP hand-off.",
+    "filters": {
+      "status": "Status",
+      "allStatuses": "All statuses"
+    },
+    "status": {
+      "draft": "Draft",
+      "submitted": "Submitted",
+      "approved": "Approved"
+    },
+    "table": {
+      "aria": "Purchase orders table"
+    },
+    "columns": {
+      "number": "PO #",
+      "vendor": "Vendor",
+      "total": "Total",
+      "status": "Status",
+      "erp": "ERP Sync",
+      "actions": "Actions"
+    },
+    "erp": {
+      "synced": "Synced",
+      "failed": "Failed",
+      "pending": "Pending",
+      "notConfigured": "No ERP system configured",
+      "syncedTooltip": "Successfully synced to ERP.",
+      "pendingTooltip": "Configured for ERP sync; not yet confirmed.",
+      "manualSync": "Manually trigger ERP sync"
+    },
+    "onboarding": {
+      "title": "Vendor onboarding",
+      "loadError": "Unable to load onboarding records. Please try again.",
+      "empty": "No onboarding records yet.",
+      "emptyHint": "Start onboarding from vendor management or by ID.",
+      "statusLabel": "Status",
+      "stepsLabel": "Steps",
+      "vendorIdField": "Vendor ID to initiate onboarding",
+      "vendorIdHelp": "Paste vendor ID and tab out to initiate onboarding."
+    },
+    "guidance": {
+      "title": "Integration & error guidance",
+      "text": "ERP sync attempts are logged and surfaced here. Persistent failures should be reviewed by an admin using the integration dashboard; no PO changes are lost if sync fails."
+    },
+    "createPoInfo": "PO creation is transactional: if ERP sync fails, the PO is still saved locally and errors are clearly surfaced for admin resolution.",
+    "fields": {
+      "vendorId": "Vendor ID",
+      "contractId": "Linked contract (optional)",
+      "currency": "Currency",
+      "erpSystem": "ERP system (optional)",
+      "noErp": "Do not sync yet",
+      "lineItems": "Line items",
+      "description": "Description",
+      "quantity": "Qty",
+      "unitPrice": "Unit price",
+      "addLineItem": "Add line item",
+      "estimatedTotal": "Estimated total"
+    },
+    "createPoError": "Unable to create PO. Please verify fields and try again."
+  },
+  "performance": {
+    "title": "Vendor Performance Management",
+    "subtitle": "AI-assisted scorecards and penalty suggestions are advisory only. All actions require human approval and are fully auditable.",
+    "createScorecard": "New Scorecard",
+    "retry": "Retry",
+    "loadError": "Unable to load performance scorecards. Please try again.",
+    "empty": "No scorecards yet. Generate one to see AI-assisted performance insights.",
+    "filters": {
+      "vendorId": "Vendor ID filter"
+    },
+    "table": {
+      "aria": "Scorecards table"
+    },
+    "columns": {
+      "vendor": "Vendor",
+      "period": "Period",
+      "overallScore": "Overall score",
+      "ai": "AI"
+    },
+    "aiScorecard": "AI Scorecard",
+    "aiScorecardRationale": "Generated from SLA, delivery, and quality metrics.",
+    "detail": {
+      "placeholder": "Select a scorecard to see AI explanation, metrics, and confidence levels.",
+      "periodLabel": "Period",
+      "aiAdvisory": "This scorecard is AI-assisted and advisory only. Any penalties or actions derived from it must be explicitly approved by a human.",
+      "metricsTitle": "Key metrics",
+      "metricsAria": "Metrics",
+      "metricsEmpty": "No detailed metrics available for this scorecard."
+    },
+    "metrics": {
+      "name": "Metric",
+      "actual": "Actual",
+      "target": "Target",
+      "score": "Score"
+    },
+    "penalties": {
+      "title": "Penalty suggestions",
+      "loadError": "Unable to load penalties. Please try again.",
+      "tableAria": "Penalties table",
+      "columns": {
+        "vendor": "Vendor",
+        "type": "Type",
+        "amount": "Amount",
+        "status": "Status",
+        "bias": "Bias",
+        "actions": "Actions"
+      },
+      "empty": "No penalties recorded yet. AI suggestions will appear here for human approval.",
+      "biasFlagTooltip": "Bias pattern detected. Requires explicit review.",
+      "noBias": "No bias patterns detected",
+      "approveTooltip": "Approve this penalty. No penalty is enforced automatically.",
+      "approve": "Approve penalty"
+    },
+    "guidance": {
+      "title": "Explainability & override guidance",
+      "text": "AI-generated trends and penalties are suggestions only. All enforcement requires explicit human approval, and any overrides or approvals are logged for audit."
+    },
+    "createInfo": "The system will propose an AI-generated scorecard based on SLA, delivery, and quality data. The result is advisory only and can be overridden or discarded.",
+    "fields": {
+      "vendorId": "Vendor ID",
+      "contractId": "Contract ID (optional)",
+      "periodStart": "Period start",
+      "periodEnd": "Period end"
+    },
+    "createError": "Unable to create scorecard. Please verify the fields and try again."
+  },
+  "risk": {
+    "title": "Vendor Risk Management",
+    "subtitle": "External risk scores and alerts are consolidated here. All data pulls are auditable, and no external data is overwritten without explicit admin action.",
+    "newAssessment": "New Risk Assessment",
+    "retry": "Retry",
+    "filters": {
+      "vendorId": "Vendor ID filter",
+      "severity": "Alert severity",
+      "allSeverities": "All severities"
+    },
+    "severity": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "columns": {
+      "vendor": "Vendor",
+      "provider": "Provider",
+      "score": "Score",
+      "level": "Level",
+      "date": "Assessment date",
+      "message": "Message",
+      "severity": "Severity",
+      "status": "Status",
+      "source": "Source",
+      "actions": "Actions"
+    },
+    "assessments": {
+      "title": "Risk assessments",
+      "aria": "Risk assessments",
+      "loadError": "Unable to load risk assessments. Please check your connection and try again.",
+      "empty": "No risk assessments yet. Run a new assessment to pull scores from external providers."
+    },
+    "alerts": {
+      "title": "Risk alerts",
+      "aria": "Risk alerts",
+      "loadError": "Unable to load risk alerts. Please check your connection and try again.",
+      "empty": "No active risk alerts. Threshold-crossing events from providers will appear here.",
+      "acknowledgeTooltip": "Acknowledge this alert. No changes are applied automatically.",
+      "acknowledge": "Acknowledge alert"
+    },
+    "detail": {
+      "placeholder": "Select an assessment or alert to view provider details and risk rationale.",
+      "providerInfoTooltip": "View how this external score was calculated.",
+      "assessmentDate": "Assessment date",
+      "scoreLabel": "Risk score & level",
+      "providerDataTitle": "Provider data snapshot",
+      "ratingLabel": "Rating",
+      "lastUpdated": "Last updated",
+      "noProviderData": "No additional provider details stored for this assessment.",
+      "alertTitle": "Selected alert",
+      "alertCreated": "Created"
+    },
+    "guidance": {
+      "title": "External risk data & lossless handling",
+      "text": "Risk scores from providers like Moody’s, D&B, and S&P are pulled but never overwrite internal data without explicit admin action. All provider calls use retry and backoff, and persistent failures surface as visible alerts for risk admins."
+    },
+    "newAssessmentInfo": "The platform will pull the latest vendor risk score from the selected provider. Network failures surface with retry guidance; no existing scores are deleted.",
+    "fields": {
+      "vendorId": "Vendor ID",
+      "provider": "Provider",
+      "internalProvider": "Internal model"
+    },
+    "newAssessment": {
+      "info": "The platform will pull the latest vendor risk score from the selected provider. Network failures surface with retry guidance; no existing scores are deleted.",
+      "error": "Unable to create risk assessment. Please verify the fields and try again."
+    }
+  },
+  "analytics": {
+    "title": "Vendor Metrics & Analytics",
+    "subtitle": "Dashboards and AI insights are advisory only. All trends expose their drivers, datasets, and confidence to support accountable decision-making.",
+    "retry": "Retry",
+    "dashboards": {
+      "title": "Available dashboards",
+      "loadError": "Unable to load analytics dashboards. Please try again.",
+      "empty": "No dashboards configured yet. Admins can create shared analytics views in the admin panel.",
+      "shared": "Shared",
+      "private": "Private"
+    },
+    "vendorSummary": {
+      "title": "Vendor summary & AI insight",
+      "vendorIdField": "Vendor ID",
+      "loadButton": "Load summary",
+      "loadError": "Unable to load vendor summary. Please confirm the vendor ID and try again.",
+      "placeholder": "Enter a vendor ID to see contracts, spend, performance, risk, and AI insight for that vendor.",
+      "contracts": "Active contracts",
+      "pos": "Purchase orders",
+      "spend": "Total spend",
+      "avgScore": "Avg. performance score",
+      "riskTitle": "Latest risk snapshot",
+      "riskDate": "Assessed on"
+    },
+    "ai": {
+      "title": "AI insight (advisory only)",
+      "explainTooltip": "Shows how this prediction was calculated and which factors drove it.",
+      "advisoryBanner": "This insight is AI-generated and advisory only. No actions are triggered automatically; you must decide what to do with it.",
+      "trendLabel": "Trend",
+      "predictionLabel": "Prediction",
+      "confidenceLabel": "Confidence",
+      "driversTitle": "Key drivers",
+      "dataSourcesTitle": "Dataset used"
+    }
+  },
+  "helpdesk": {
+    "title": "Helpdesk & Disputes",
+    "subtitle": "Track tickets, disputes, and evidence in an accessible, auditable workspace. No actions are lost on network issues—drafts remain in the form until submitted.",
+    "createTicket": "New Ticket",
+    "retry": "Retry",
+    "loadError": "Unable to load tickets. Please check your connection and try again.",
+    "empty": "No tickets yet. Create one to start tracking issues and disputes.",
+    "filters": {
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "type": "Type",
+      "allTypes": "All types",
+      "priority": "Priority",
+      "allPriorities": "All priorities"
+    },
+    "status": {
+      "open": "Open",
+      "inProgress": "In progress",
+      "resolved": "Resolved",
+      "closed": "Closed"
+    },
+    "type": {
+      "dispute": "Dispute",
+      "support": "Support",
+      "question": "Question",
+      "complaint": "Complaint"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "table": {
+      "aria": "Helpdesk tickets table"
+    },
+    "columns": {
+      "number": "Ticket #",
+      "title": "Title",
+      "vendor": "Vendor",
+      "type": "Type",
+      "priority": "Priority",
+      "status": "Status"
+    },
+    "detail": {
+      "placeholder": "Select a ticket to view its details, threaded discussion, and evidence.",
+      "loading": "Loading ticket details...",
+      "loadError": "Unable to load ticket details. Please try again.",
+      "createdBy": "Created by",
+      "assignedTo": "Assigned to",
+      "unknown": "Unknown",
+      "attachments": "Evidence & attachments"
+    },
+    "comments": {
+      "title": "Threaded discussion",
+      "empty": "No comments yet.",
+      "add": "Add a comment",
+      "attachmentField": "Attachment name or URL (optional)",
+      "addAttachment": "Add",
+      "pendingAttachments": "Pending attachments",
+      "attachments": "Attachments",
+      "error": "Unable to add comment. Please try again.",
+      "submit": "Post comment"
+    },
+    "create": {
+      "info": "Ticket drafts stay in this dialog until submitted. If your network drops, your text and attachments remain in the form so you can retry without losing data.",
+      "error": "Unable to create ticket. Please check required fields and try again."
+    },
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "type": "Ticket type",
+      "priority": "Priority",
+      "vendorId": "Vendor ID (optional)",
+      "contractId": "Contract ID (optional)",
+      "attachments": "Evidence & attachments",
+      "attachmentsHint": "Paste filenames or URLs for now. Actual file upload endpoints can be wired later; all entries remain linked to this ticket.",
+      "attachmentName": "Attachment name or URL",
+      "addAttachment": "Add"
+    }
+  },
+  "surveys": {
+    "title": "Surveys (VOC / VOV)",
+    "subtitle": "Capture voice-of-customer and voice-of-vendor feedback with explainable AI sentiment summaries. All analysis is advisory only and never auto-acts.",
+    "retry": "Retry",
+    "loadError": "Unable to load surveys. Please check your connection and try again.",
+    "empty": "No surveys configured yet. Create one to start capturing feedback.",
+    "filters": {
+      "type": "Type",
+      "allTypes": "All types",
+      "status": "Status",
+      "allStatuses": "All statuses"
+    },
+    "type": {
+      "VOC": "Voice of Customer (VOC)",
+      "VOV": "Voice of Vendor (VOV)"
+    },
+    "status": {
+      "draft": "Draft",
+      "active": "Active",
+      "closed": "Closed"
+    },
+    "table": {
+      "aria": "Surveys table"
+    },
+    "columns": {
+      "number": "Survey #",
+      "title": "Title",
+      "type": "Type",
+      "status": "Status",
+      "createdBy": "Created by"
+    },
+    "detail": {
+      "placeholder": "Select a survey to view AI sentiment analytics and drivers.",
+      "loading": "Loading survey analytics...",
+      "loadError": "Unable to load survey analytics. Please try again.",
+      "responsesCount": "Total responses",
+      "avgSentiment": "Average sentiment"
+    },
+    "ai": {
+      "title": "AI sentiment insight (advisory only)",
+      "advisoryBanner": "This sentiment summary is AI-generated and advisory only. It does not trigger any workflow or decision automatically.",
+      "explainLink": "How was this score calculated?",
+      "trendLabel": "Trend",
+      "comparisonLabel": "Compared to historic average",
+      "driversTitle": "Contributing drivers",
+      "biasFlagged": "Bias Flagged",
+      "noBias": "No significant bias patterns detected"
+    },
+    "createSurvey": "New Survey",
+    "create": {
+      "info": "Define survey questions as one per line. Responses will later feed AI sentiment analysis that is advisory only, with explainable drivers.",
+      "error": "Unable to create survey. Please verify required fields and try again."
+    },
+    "fields": {
+      "title": "Title",
+      "description": "Description (optional)",
+      "type": "Survey type",
+      "questions": "Questions (one per line)",
+      "targetAudience": "Target audience IDs (comma-separated, optional)"
+    }
+  },
+  "admin": {
+    "title": "Administration",
+    "subtitle": "Review immutable audit logs and manage vendor master data in line with data governance and tenant isolation policies.",
+    "retry": "Retry",
+    "audit": {
+      "title": "Audit logs",
+      "loadError": "Unable to load audit logs. Please try again.",
+      "empty": "No audit entries found for the current filters.",
+      "tableAria": "Audit logs table",
+      "columns": {
+        "timestamp": "Timestamp",
+        "user": "User",
+        "module": "Module",
+        "action": "Action",
+        "ip": "IP"
+      },
+      "filters": {
+        "module": "Module filter",
+        "action": "Action contains",
+        "limit": "Max rows"
+      }
+    },
+    "vendors": {
+      "title": "Vendor master",
+      "create": "New Vendor",
+      "loadError": "Unable to load vendors. Please try again.",
+      "empty": "No vendors found. Add a vendor to populate the master.",
+      "tableAria": "Vendors table",
+      "columns": {
+        "code": "Code",
+        "name": "Name",
+        "status": "Status",
+        "email": "Email"
+      },
+      "filters": {
+        "status": "Status",
+        "allStatuses": "All statuses"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "fields": {
+        "name": "Vendor name",
+        "code": "Vendor code",
+        "legalName": "Legal name (optional)",
+        "taxId": "Tax ID (optional)",
+        "email": "Contact email (optional)",
+        "phone": "Contact phone (optional)"
+      },
+      "createError": "Unable to create vendor. Please verify fields and try again."
+    },
+    "governance": {
+      "title": "Governance notes",
+      "text": "Audit logs reflect non-repudiable, tenant-scoped actions only. Vendor data shown here belongs to the current tenant and never crosses tenant boundaries, in line with isolation rules."
+    }
+  }
+}
