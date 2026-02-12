@@ -1,6 +1,19 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+app.use(cors({
+  origin: [
+    'https://jaggu564.github.io',   // ✅ GitHub Pages frontend
+    'http://localhost:5173'         // ✅ Local development
+  ],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
+// ✅ IMPORTANT: allow preflight requests
+app.options('*', cors());
+
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { errorHandler } = require('./middleware/errorHandler');
