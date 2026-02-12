@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+const IS_DEMO = import.meta.env.PROD;
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -20,11 +21,33 @@ export default function Login() {
 
   const { login } = useAuth();
   const navigate = useNavigate();
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
+    // DEMO MODE (GitHub Pages)
+    if (IS_DEMO) {
+      if (email === 'admin@demo.com' && password === 'admin') {
+        localStorage.setItem(
+          'demoUser',
+          JSON.stringify({
+            email: 'admin@demo.com',
+            role: 'Admin',
+            token: 'demo-token',
+          })
+        );
+
+        navigate('/dashboard', { replace: true });
+        return;
+      } else {
+        setError('Demo credentials: admin@demo.com / admin');
+        return;
+      }
+    }
+
+    // LOCAL DEV / REAL BACKEND
     try {
       await login(email, password);
       navigate('/dashboard', { replace: true });
@@ -32,7 +55,6 @@ export default function Login() {
       setError(err.response?.data?.error || t('auth.invalidCredentials'));
     }
   };
-
 
   return (
     <Container component="main" maxWidth="xs">
@@ -48,6 +70,13 @@ export default function Login() {
           <Typography component="h1" variant="h5" gutterBottom>
             {t('auth.login')}
           </Typography>
+
+          {IS_DEMO && (
+            <Alert severity="info" sx={{ mb: 2 }}>
+              Demo Mode — Use <b>admin@demo.com / admin</b>
+            </Alert>
+          )}
+
           <form onSubmit={handleSubmit}>
             <TextField
               margin="normal"
@@ -75,12 +104,13 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
               sx={{ mb: 2 }}
             />
-            
+
             {error && (
               <Alert severity="error" sx={{ mb: 2 }}>
                 {error}
               </Alert>
             )}
+
             <Button
               type="submit"
               fullWidth
